@@ -42,14 +42,7 @@
         android:orientation="horizontal"
         android:weightSum="6">
 
-        <Button
-            android:id="@+id/mc_btnID"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimaryDark"
-            android:text="MC"
-            android:textSize="15dp" />
+
 
         <Button
             android:id="@+id/mr_btnID"
