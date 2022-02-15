@@ -289,7 +289,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="operationFunction"
+            android:onClick="numberFunction"
             android:text="6"
             android:textSize="30dp" />
         <!--⨉-->
@@ -371,7 +371,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="operationFunction"
             android:text="+/-"
             android:textSize="20dp" />
 
@@ -391,6 +391,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="numberFunction"
             android:text="."
             android:textSize="35dp" />
         <!--⨉-->
