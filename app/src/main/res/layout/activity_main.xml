@@ -7,76 +7,75 @@
     android:orientation="vertical"
     android:weightSum="9"
     tools:context=".MainActivity">
-    <!--  Secondary View  -->
+    <!--  Secondary TextView  -->
     <TextView
         android:id="@+id/secondary_viewId"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.7"
-        android:background="@color/colorPrimary"
         android:gravity="right"
         android:paddingRight="10dp"
-        android:textColor="@color/colorWhite"
+        android:textColor="#000000"
         android:textSize="30dp" />
 
-    <!--  Primary View  -->
+    <!--  Primary TextView  -->
     <TextView
         android:id="@+id/primary_viewId"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.3"
-        android:background="@color/colorPrimary"
         android:gravity="right"
         android:paddingRight="10dp"
         android:text="0"
-        android:textColor="@color/colorWhite"
+        android:textColor="#000000"
         android:textSize="50dp" />
 
 
-    <!--  3  -->
+    <!--  Level-1  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:weightSum="6">
 
         <Button
-            android:id="@+id/mc_btnID"
+            android:id="@+id/mrClearButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="clearMemory"
             android:text="MC"
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/mr_btnID"
+            android:id="@+id/mrShowButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
+            android:onClick="showMemory"
             android:text="MR"
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/mPlus_btnID"
+            android:id="@+id/memPlusButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="changeMemory"
             android:text="M+"
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/mMinus_btnID"
+            android:id="@+id/memMinusButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="changeMemory"
             android:text="M-"
             android:textSize="15dp" />
 
@@ -86,7 +85,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
             android:text="MS"
             android:textSize="15dp" />
 
@@ -96,18 +94,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
             android:text="M⏑"
             android:textSize="15dp" />
 
     </LinearLayout>
 
-    <!--  4  -->
+    <!--  Level-2  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:textSize="25dp"
         android:weightSum="4">
@@ -118,7 +114,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="percentFunction"
             android:text="%"
             android:textSize="25dp" />
 
@@ -128,7 +124,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="clearFunction"
             android:text="CE"
             android:textSize="20dp" />
 
@@ -141,24 +137,23 @@
             android:onClick="clearFunction"
             android:text="C"
             android:textSize="25dp" />
-        <!--⨉-->
+
         <Button
-            android:id="@+id/cancle_btnID"
+            android:id="@+id/back_btnID"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="backFunction"
             android:text="←"
             android:textSize="40dp" />
     </LinearLayout>
 
-    <!--  5  -->
+    <!--  Level-3  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -191,7 +186,7 @@
             android:onClick="numberFunction"
             android:text="√"
             android:textSize="20dp" />
-        <!--⨉-->
+
         <Button
             android:id="@+id/division_btnID"
             android:layout_width="0dp"
@@ -204,12 +199,11 @@
             android:textSize="35dp" />
     </LinearLayout>
 
-    <!--  6  -->
+    <!--  Level-4  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -242,7 +236,7 @@
             android:onClick="numberFunction"
             android:text="9"
             android:textSize="30dp" />
-        <!--⨉-->
+
         <Button
             android:id="@+id/multiple_btnID"
             android:layout_width="0dp"
@@ -254,12 +248,11 @@
             android:textSize="25dp" />
     </LinearLayout>
 
-    <!--  7  -->
+    <!--  Level-5  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -292,7 +285,7 @@
             android:onClick="numberFunction"
             android:text="6"
             android:textSize="30dp" />
-        <!--⨉-->
+
         <Button
             android:id="@+id/subtraction_btnID"
             android:layout_width="0dp"
@@ -304,12 +297,11 @@
             android:textSize="35dp" />
     </LinearLayout>
 
-    <!--  8  -->
+    <!--  Level-6  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
 
         android:orientation="horizontal"
         android:weightSum="4">
@@ -343,7 +335,7 @@
             android:onClick="numberFunction"
             android:text="3"
             android:textSize="30dp" />
-        <!--⨉-->
+
         <Button
             android:id="@+id/addition_btnID"
             android:layout_width="0dp"
@@ -352,16 +344,14 @@
             android:background="@color/colorPrimaryDark"
             android:onClick="operationFunction"
             android:text="+"
-
             android:textSize="35dp" />
     </LinearLayout>
 
-    <!--  9  -->
+    <!--  Level-7  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -381,20 +371,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="zeroFunction"
             android:text="0"
             android:textSize="30dp" />
 
         <Button
-            android:id="@+id/dosomik_btnID"
+            android:id="@+id/decimal_btnID"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="numberFunction"
+            android:onClick="addDecimal"
             android:text="."
             android:textSize="35dp" />
-        <!--⨉-->
+
         <Button
             android:id="@+id/equal_btnID"
             android:layout_width="0dp"
