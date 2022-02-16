@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         String command = bt.getText().toString();
         String displayText = primaryView.getText().toString();
         if (command.equals("M+")) { //add value to memory
-            if (displayText.indexOf("+") != -1 && displayText.indexOf("=") == -1) {   //use this case if the output is showing full equation
+            if (displayText.contains("+") && displayText.indexOf("=") == -1) {   //use this case if the output is showing full equation
                 return;
             } else if (displayText.indexOf("=") != -1) { //if a full equation, add tempResult to memory then reset
                 memory += tempResult;
